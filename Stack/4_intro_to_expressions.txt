@@ -1,0 +1,41 @@
+// Introduction to Prefix, Infix and Postfix
+
+/*---------------------------------------------------------------------------
+- What is expression?
+It is a combination of constants, symbols and variables.
+
+- Infix Expression:-
+<operand> <operator> <operand>
+
+(binary operator)
+eg. 2+3, a*c+d, (8/2)+5
+
+How to evaluate them?
+BODMAS
+
+Precedence:
+1. (), {}, []
+2. ^
+3. *, /
+4. +, -
+
+And Associativity will be from Left to Right.
+eg. 4-2+3
+but for ^, associativity will be from Right to Left. eg. 2^3^2 --> (2^(3^2)) = 9
+
+But computer don't know the Precedence, so we use prefix expression.
+
+- Prefix Expression:-
+Also called Polish notation.
+<operator> <operand> <operand>
+
+eg. 4 * 2 + 3 --> + * 4 2 3
+eg. 5 - 6 / 3 --> - 5 / 6 3
+
+- Postfix Expression:-
+Also called Reverse Polish notation.
+<operand> <operand> <operator> 
+
+eg. 4 * 2 + 3 -->  4 2 * 3 +
+eg. 5 - 6 / 3 -->  5 6 3 / -
+---------------------------------------------------------------------------*/
