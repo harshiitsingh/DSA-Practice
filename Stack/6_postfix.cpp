@@ -1,26 +1,24 @@
-// Prefix Expression Evaluation
+// Postfix Expression Evaluation
 
-// In prefix we start from end of the expression.
-// this code is only valid for numbers between 0 to 9
-// means numbers given in the expression must be between 0 and 9 or single integer values
+// // In postfix we start from beginning of the expression to evaluate.
 
-#include <bits/stdc++.h>
+#include <iostream>
 #include<stack>
-#include<math.h> // for exponential
+#include<math.h>
 using namespace std;
 
-int prefixEvaluation(string s){
+int postfixEvaluation(string s){
     stack<int> st;
 
-    for(int i = s.length()-1; i>=0; i--){ // since we are traversing from the end of the expression.
+    for(int i = 0; i<=s.length()-1; i++){ // since we are traversing from the beginning of the expression.
         // first cheking s[i] is operand or not.
         if(s[i] >= '0' && s[i] <= '9'){
             st.push(s[i]-'0'); // pushing as a integer value
         }
         else{ // if it is operator
-            int op1 = st.top();
-            st.pop();
             int op2 = st.top();
+            st.pop();
+            int op1 = st.top();
             st.pop();
 
             switch (s[i])
@@ -51,8 +49,10 @@ int prefixEvaluation(string s){
     return st.top();
 }
 
-int main()
-{
-    cout<<prefixEvaluation("-+7*45+20")<<endl;
+int main(){
+    cout<<postfixEvaluation("46+2/5*7+")<<endl;
+
     return 0;
 }
+
+// Time complexity is O(L); L is the length of the string
