@@ -1,0 +1,5 @@
+Deque -> Double Ended Queue
+
+1. Push and pop from the end.
+2. Insert and delete from start.
+3. Header File: <deque>
