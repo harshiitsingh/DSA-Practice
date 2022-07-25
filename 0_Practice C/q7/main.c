@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//WAP to find the area of parallelogram.
+
+int main()
+{
+     float base, altitude;
+     float area;
+
+    printf("Enter base and altitude of the given Parallelogram: \n ");
+    scanf("%f%f", &base, &altitude);
+    area = base * altitude;
+    printf("Area of Parallelogram is: %.3f\n", area);
+    return 0;
+}
