@@ -2,8 +2,15 @@
 
 // Related Topics: Stack, Array, Hash Table(Unordered Map) and Monotonic Stack
 
-// Brute Force
+/*
+Number of problems which could be solved using this concept of monotone stack.
+1-Next greater element 
+2-Next smaller element 
+3-previous smaller element 
+4-previous smaller element
+*/
 
+// Brute Force Approach
 class Solution {
 public:
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
